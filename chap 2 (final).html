@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The White Lotus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9b1414;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header {
+            padding: 20px;
+            background-color: #2c6ec5;
+            color: white;
+        }
+        nav {
+            margin: 20px auto;
+            text-align: center;
+        }
+        nav button {
+            margin: 0 10px;
+            padding: 10px 15px;
+            background-color: #18acda;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        section {
+            display: none;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center; /* Center text within sections */
+        }
+        .active {
+            display: block;
+        }
+        .quiz {
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        .quiz button {
+            display: block;
+            margin: 10px auto;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px auto;
+            text-align: center;
+        }
+        nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a {
+            color: white;
+        }
+        #cast ul {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="https://www.hbo.com/the-white-lotus" target="_blank" class="button">Official Website</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>The White Lotus</h1>
+    </header>
+    <nav>
+        <button onclick="showSection('summary')">Short Summary</button>
+        <button onclick="showSection('cast')">Cast</button>
+        <button onclick="showSection('reviews')">Reviews</button>
+        <button onclick="showQuiz()">Which Character Are You?</button>
+    </nav>
+    <section id="summary" class="active">
+        <h2>Short Summary</h2>
+        <p>Season 1: Set in a tropical resort, the series explores the lives of guests and staff over a week, revealing dark secrets and social dynamics.</p>
+        <p>Season 2: The story shifts to a new location, delving into the complexities of relationships and the impact of wealth.</p>
+        <p>Season 3: The narrative continues to unravel the intricacies of human behavior against the backdrop of luxury and privilege.</p>
+    </section>
+    <section id="cast">
+        <h1>Cast</h1>
+        <p>Greg Hunt played by Jon Gries</p>
+        <p>Belinda Lindsey played by Natasha Rothwell</p>
+        <p>Tanya McQuoid-Hunt played by Jennifer Coolidge</p>
+        <p>Rick Hatchett played by Walton Goggins</p>
+        <p>Piper Ratliff played by Sarah Catherine Hook</p>
+        <p>Lochlan Ratliff played by Sam Nivola</p>
+        <p>Saxon Ratliff played by Patrick Schwarzenegger</p>
+        <p>Chelsea played by Aimee Lou Wood</p>
+        <p>Kate Bhor played by Leslie Bibb</p>
+        <p>Laurie Duffy played by Carrie Coon</p>
+        <p>Timothy Ratliff played by Jason Issacs</p>
+        <p>Jaclyn Lemon played by Michelle Monaghan</p>
+        <p>Victoria Ratliff played by Parker Posey.</p>
+        <ul>
+            <li><a href="https://www.imdb.com/title/tt13406094/fullcredits/?ref_=tt_cst_sm" target="_blank" class="button">Click here to see the full casts</a></li>
+        </ul>
+    </section>
+    <section id="reviews">
+        <h2>Reviews</h2>
+        <p>"I went into watching The White Lotus not really knowing what to expect. I just finished the second season and now know why it's had so many great reviews and won so many awards. What makes this show so good is the acting and the writing. Each character is beautifully written and acted, not a weak link on either season. HBO always puts out great content and this is no different. It's not a show for everyone but I definitely enjoyed it. It's one of the rare anthology shows where both seasons are equally as good.- Supermanfan-13"</p>
+        <p>"I really hope she gets some award consideration love. Every single scene she is in is cringeworthy, fun, and full of depth. She's killing it!"</p>
+        <p>"The White Lotus is so much better than I expected. Both seasons have all-star casts from top to bottom and all do an incredible job. I can't point that out enough, both casts are perfect. Also, the visuals on this show are just beautiful. This series has already won so many awards for season one and I expect season two to win just as many. It's both funny and serious in how it shows the difference in classes and how some of the wealthy and privileged live their lives. There are no real villains in this show but definitely some- Rob 1331"</p>
+        <p>"Such an entertaining series and it gives you so many view points of life. It was also really funny and captivating. One can definitely learn a lot watching this series. Definitely a must watch.- Pirzadaj"</p>
+        <p>"Beautiful sights, mystery and likeable characters. The actors are very well cast and each episode has me guessing what mystery might unfold as the season continues. I can't get enough of this show."
+        <P>-johnstonbradford 393-79906"</p>
+    </section>
+    <div class="quiz" id="quiz" style="display:none;">
+        <h2>Which Character Are You?</h2>
+        <button onclick="showResult('Rachel')">I love adventure!</button>
+        <button onclick="showResult('Armond')">I prefer to keep things organized.</button>
+        <button onclick="showResult('Tanya')">I enjoy the finer things in life.</button>
+        <button onclick="showResult('Greg')">I value my privacy.</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+            document.getElementById('quiz').style.display = 'none';
+        }
+        function showQuiz() {
+            document.getElementById('quiz').style.display = 'block';
+        }
+        function showResult(character) {
+            document.getElementById('result').innerText = "You are " + character + "!";
+        }
+    </script>
+</body>
+</html>
