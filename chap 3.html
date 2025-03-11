@@ -3,33 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eternal Whispers of the Earth</title>
+    <title>Nature's Palette Gallery</title>
     <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #fff3e0); /* Soft gradient background */
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+        }
+        h1 {
+            color: #d84315; /* Warm, earthy color */
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
         img {
-            width: 300px;
-            height: auto;
-            filter: brightness(0.8) contrast(1.2);
-            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: grayscale(20%); /* Less intense grayscale */
+        }
+        img:hover {
+            transform: scale(1.05);
+            filter: none;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+        .gallery div {
+            margin: 20px;
+            text-align: center;
+            background: rgba(202, 135, 135, 0.8); /* Semi-transparent white background for containers */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .gallery div p {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        /* Color overlays for a subtle effect */
+        .gallery div:nth-child(odd) img {
+            mix-blend-mode: multiply;
+            opacity: 0.95;
+        }
+        .gallery div:nth-child(even) img {
+            mix-blend-mode: screen;
+            opacity: 0.95;
         }
     </style>
-</head>
-<body>
-    <h1>Eternal Whispers of the Earth</h1>
+<h1>Eternal Whispers of the Earth</h1>
     
-    <div>
-        <img src="nature.jpg" alt="Eternal Elegance" title="Unity in Ethernal" />
-        <figcaption>Image copyright: Creative Commons Attribution 4.0 International License</figcaption>
+    <div class="gallery">
+        <div>
+            <img src="nature.jpg" alt="download image" title="Unity in Ethernal" width="400" height="300">
+            <p>Copyright License: CC BY 2.0</p>
+        </div>
+        
+        <div>
+            <img src="nature 1.jpg" alt="download image" title="Tranquil Nature " width="400" height="300">
+            <p>Copyright License: CC BY 2.0</p>
+        </div>
+        
+        <div>
+            <img src="nature 2.jpg" alt="download image" title="Whispers of Blue Blossom" width="400" height="300">
+            <p>Copyright License: CC BY 2.0</p>
+        </div>
     </div>
-    
-    <div>
-        <img src="nature 1.jpg" alt="Mystic Nature" title="Tranquil Nature" />
-        <figcaption>Image copyright: Creative Commons Attribution 4.0 International License</figcaption>
-    </div>
-    
-    <div>
-        <img src="nature 2.jpg" alt="A serene landscape" title="Whispers of Blue Blossom  " />
-        <figcaption>Image copyright: Creative Commons Attribution 4.0 International License</figcaption>
-    </div>
-
 </body>
 </html>
